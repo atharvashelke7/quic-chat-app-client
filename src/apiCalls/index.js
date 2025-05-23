@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const url = "http://localhost:3000";
+export const url = "https://quic-chat-app-server.onrender.com";
 
 export const axiosInstance = axios.create({
   baseURL: url,

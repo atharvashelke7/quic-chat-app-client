@@ -5,7 +5,7 @@ import ChatPage from "../../components/ChatPage";
 import { useSelector } from "react-redux";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+const socket = io("https://quic-chat-app-server.onrender.com");
 
 const Home = () => {
   const { selectedChat, user } = useSelector((state) => state.userReducer);
