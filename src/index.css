@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes spinner {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
+  .animate-spinner {
+    animation: spinner 1.2s infinite;
+  }
+
+  .main-chat-area::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.main-chat-area::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+.main-chat-area::-webkit-scrollbar-thumb {
+  background: #e74c3c; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.main-chat-area::-webkit-scrollbar-thumb:hover {
+  background: #e74c3c; 
+}
+
+@media only screen and (max-width: 1000px) {
+  .filter-user-details, .last-message-timestamp {
+    display: none;
+  }
+  .user-search-area, .unread-message-counter {
+      display: none;
+  }
+  .app-sidebar{
+      width: 15%;
+  }
+  .app-chat-area{
+      width: 85%
+  }
+}
+
+
+.unread-message-counter{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+}
